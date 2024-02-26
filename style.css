@@ -1,12 +1,15 @@
+/*
+Author: Andrew Gardner
+Date: 25-26/2/2024
+*/
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  color: white;
-  background-color: rgba(192, 134, 134, 0);
-  animation: fadeIn ease 2s;
-  animation-iteration-count: 1;
+  color: black;
+  background-color: white;
 }
 
 @keyframes fadeIn {
@@ -33,7 +36,7 @@ h2 {
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 h3 {
@@ -43,6 +46,7 @@ h3 {
   font-weight: 700;
   font-style: normal;
   font-size: 5rem;
+  /* line-height: 5rem; */
 }
 
 h4 {
@@ -52,6 +56,7 @@ h4 {
   font-weight: 700;
   font-style: normal;
   font-size: 2rem;
+  line-height: 2rem;
 }
 
 h5 {
@@ -65,10 +70,10 @@ h5 {
 
 .splash {
   background-color: #00000052;
-  min-height: 100vh;
+  height: 100vh;
   background-attachment: fixed;
-  background-position: 50%;
-  background-size: cover;
+  background-position: 50% 50%;
+  background-size: auto;
   background-image: url(img/splash.jpg);
   background-blend-mode: hard-light;
   box-shadow: 0 0 50rem rgba(160, 6, 6, 0.363) inset;
@@ -84,10 +89,12 @@ h5 {
   opacity: 1;
   margin-top: auto;
   transition: transform 1s ease;
+  user-select: none;
 }
 
 .splash h1:hover {
-  transform: scale(120%);
+  cursor: crosshair;
+  transform: scale(105%);
 }
 
 .explore {
@@ -100,13 +107,115 @@ h5 {
   text-decoration: none;
   user-select: none;
   transition: transform 1s ease;
+  animation: fadeIn ease 2s;
+  animation-iteration-count: 1;
 }
 
 .explore:hover {
-  transform: translateY(10px);
+  transform: translateY(1rem);
+}
+
+.explore:active {
+  cursor: default;
 }
 
 .content {
-  background-color: white;
   min-height: 100vh;
+}
+
+.content > * {
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content > section {
+  min-height: 50vh;
+}
+
+.content > article {
+  min-height: 100vh;
+}
+
+.story {
+  padding: 1rem 2rem;
+}
+
+.story > *:first-child {
+  margin-bottom: 5vh;
+}
+
+.story > h4 {
+  padding: 0 3rem;
+}
+
+.menu {
+  padding: 1rem 2rem;
+  justify-content: space-around;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.menu li:hover {
+  cursor: pointer;
+  transform: scale(120%);
+}
+
+.menu h3 {
+  transition: background-color 0.2s ease, color 0.05s ease;
+}
+
+.menu h3:hover {
+  color: white;
+  background-color: #dc2626;
+}
+
+.menu li:active {
+  cursor: default;
+  transform: scale(115%);
+}
+
+.contact div:first-child {
+  margin-bottom: 5vh;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social > * {
+  transition: transform 0.3s ease;
+}
+
+.social > *:hover {
+  cursor: pointer;
+  transform: scale(120%);
+}
+
+.social > *:active {
+  cursor: default;
+  transform: scale(110%);
+}
+
+@media screen and (min-width: 1400px) {
+  body {
+    background-color: rgb(253, 221, 221);
+  }
+
+  .splash {
+    background-size: 350vh;
+  }
 }
