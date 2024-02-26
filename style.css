@@ -1,0 +1,112 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: white;
+  background-color: rgba(192, 134, 134, 0);
+  animation: fadeIn ease 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25vw;
+}
+
+h2 {
+  color: #dc2626;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+h3 {
+  color: black;
+  font-family: "Antonio", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 5rem;
+}
+
+h4 {
+  color: black;
+  font-family: "Antonio", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+h5 {
+  color: white;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.splash {
+  background-color: #00000052;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: 50%;
+  background-size: cover;
+  background-image: url(img/splash.jpg);
+  background-blend-mode: hard-light;
+  box-shadow: 0 0 50rem rgba(160, 6, 6, 0.363) inset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 0;
+  transition: padding 1s ease;
+}
+
+.splash h1 {
+  opacity: 1;
+  margin-top: auto;
+  transition: transform 1s ease;
+}
+
+.splash h1:hover {
+  transform: scale(120%);
+}
+
+.explore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 5rem;
+  text-decoration: none;
+  user-select: none;
+  transition: transform 1s ease;
+}
+
+.explore:hover {
+  transform: translateY(10px);
+}
+
+.content {
+  background-color: white;
+  min-height: 100vh;
+}
