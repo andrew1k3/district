@@ -46,7 +46,6 @@ h3 {
   font-weight: 700;
   font-style: normal;
   font-size: 5rem;
-  /* line-height: 5rem; */
 }
 
 h4 {
@@ -210,12 +209,39 @@ h5 {
   transform: scale(110%);
 }
 
+#menu-large {
+  display: none;
+}
+
+#explore-large {
+  display: none;
+}
+
 @media screen and (min-width: 1400px) {
-  body {
-    background-color: rgb(253, 221, 221);
+  #menu-large {
+    display: flex;
   }
 
-  .splash {
-    background-size: 350vh;
+  #menu {
+    display: none;
+  }
+
+  #explore {
+    display: none;
+  }
+
+  #explore-large {
+    display: flex;
+  }
+
+  section {
+    display: inline;
+    width: 49vw;
+    border-right: 1px solid black;
+  }
+
+  article {
+    width: 49.5vw;
+    float: right;
   }
 }
